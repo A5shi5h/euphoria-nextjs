@@ -4,7 +4,7 @@ import { LayoutGrid } from "../components/ui/layout-grid";
  
 export function LayoutGridDemo() {
   return (
-    <div id="gallery" className="h-screen py-20 w-full">
+    <div id="gallery" className="h-screen py-20 w-full relative">
       <LayoutGrid cards={cards} />
       <h1 className="text-white text-center"><span>Click on the images to view -{">"}</span></h1>
     </div>
