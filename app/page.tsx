@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { ImagesSliderDemo } from "./home";
 import {Navbar} from "./navbar";
 import { LayoutGridDemo } from "./gallery";

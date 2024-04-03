@@ -8,7 +8,7 @@ import Link from "next/link";
 export function ThreeDCardDemo() {
   return (
     <CardContainer className="inter-var overflow-y-hidden">
-      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[40rem] h-auto rounded-xl p-6 border overflow-x-hidden">
+      <CardBody className="bg-gray-100 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[95vw] sm:w-[40rem] h-auto rounded-xl p-4 border overflow-x-hidden">
         <CardItem
           translateZ="50"
           className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -18,7 +18,7 @@ export function ThreeDCardDemo() {
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-500 text-md mt-2 dark:text-neutral-300 text-justify "
+          className="text-neutral-500 text-xs sm:text-md mt-2 dark:text-neutral-300 text-justify tracking-tighter"
         >
           Anand Lamichaney also famous by his alias Mr.@one, a dynamic entrepreneur who has managed to blend his passion for food with his 
           knack for social media to create a unique and thriving career. As the proud owner of the restaurant Euphoria Singtam, he has 

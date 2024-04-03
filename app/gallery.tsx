@@ -1,12 +1,16 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+
 import { LayoutGrid } from "../components/ui/layout-grid";
+import Link from "next/link";
  
 export function LayoutGridDemo() {
   return (
-    <div id="gallery" className="h-screen py-20 w-full relative">
+    <div id="gallery" className="h-screen py-20 w-full relative flex flex-col items-center justify-center">
       <LayoutGrid cards={cards} />
       <h1 className="text-white text-center"><span>Click on the images to view -{">"}</span></h1>
+      <button className="bg-green-600 text-1xl p-3 mt-6 rounded-full text-white font-semibold hover:bg-green-700">
+        <Link href={"https://www.google.com/search?sca_esv=4e628c799bcd934b&sca_upv=1&sxsrf=ACQVn0-0WsHbLTkOdvtLas-vAHb3p3XnMg:1712123325212&q=euphoria+singtam&uds=AMwkrPvgna24-cBmgx9RlDOgMW0hFKGYm3gpQdImpNdM7gn-Dr2bl1y1SouvFzidiqeHC27V2SY7YqaRNFpBA6hwO_OwsdxeZ2CQFckYVDi3CR8kLjHzhIQvXC8pwEWKR33kHQdXGv9tf16XrIam9ieAObm-LT7aDwZQWQeaa8kpOw52Se4-Qy8ri3oReln61ookOWEKPTiFDJN7vW8JUldfsFOPgteY4m_N9JBhU9rsN6pfKIRIythOhIkuF0c8dItxLQP1pE6CFDJOAEwZbjPfurw9Nal_xqWGizNKlw8EX03zKH2ypfi7zOaoaIahB5feryw9yYJ3&udm=2&prmd=ivmsnbtz&sa=X&ved=2ahUKEwjBofG0rKWFAxUk4jgGHfkjC_sQtKgLegQICRAB&biw=1536&bih=782&dpr=1.25"}>View More</Link>
+      </button>
     </div>
   );
 }

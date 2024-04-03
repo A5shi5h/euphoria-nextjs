@@ -227,6 +227,23 @@ li img{
   li {
     width: 100%;
     padding-right: 10px;
-  }  
+  } 
+  
+  li img{
+    height: 30vh;
+  }
+
+  .about-content{
+    width: 95vw;
+  }
+
+  .about-content h1{
+    font-size: 7vw;
+  }
+
+  .about-content p{
+    font-size: 3vw;
+    letter-spacing: .1px;
+  }
 
 }

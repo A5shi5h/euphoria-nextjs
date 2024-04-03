@@ -6,7 +6,7 @@ const About = () => {
      <div className='about' id='about'>
        <div className='about-content'>
        <h1 className='about-heading'>About</h1>
-       <p className='about-para'>Welcome to Euphoria Singtam, a gastronomic haven where the art of fine dining meets the thrill 
+       <p className='about-para font'>Welcome to Euphoria Singtam, a gastronomic haven where the art of fine dining meets the thrill 
         of culinary exploration. Nestled in the heart of Singtam, Euphoria is a restaurant like no other, where your dining experience 
         transcends mere sustenance and becomes a journey of indulgence. With a rich blend of world-class cuisine, an inviting ambiance, and 
         a commitment to excellence, Euphoria promises to tantalize your taste buds and elevate your dining expectations. Join us as we embark 
@@ -21,4 +21,4 @@ const About = () => {
   )
 }
 
-export default About
+export default About;
