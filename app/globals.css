@@ -7,6 +7,7 @@ body , html {
   margin: 0;
   padding: 0;
   background-color: black;
+  overflow-x: hidden;
 }
 
 .header{
@@ -50,8 +51,13 @@ body , html {
   margin-left: 2.5rem;
   cursor: pointer;
   transition: padding-bottom 0.3s ease;
+  padding: 1rem;
 }
- 
+
+.navbar a:hover{
+  background-color: #414040;
+}
+
 .icons{
  position: absolute;
  right: 0;

@@ -1,11 +1,22 @@
 
+import gsap from 'gsap'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const feedback = () => {
+
+  useEffect(() => {
+    gsap.to("#feedback-text" , {
+      opacity:1,
+      transform:"translateY(0)",
+      ease:"power2",
+      duration:1
+    })
+  },[])
+
   return (
     <div className="feedback flex flex-col items-center" id='feedback'>
-      <h1 className='text-white text-7xl text-center mb-10 font-medium'>Check out what <span className='text-green-500 font-bold'>people</span><br/>have to <span className='text-green-500 font-bold'>say</span> about us</h1>
+      <h1 id="feedback-text" className='text-white text-7xl text-center mb-10 font-medium opacity-0 translate-y-full'>Check out what <span className='text-green-500 font-bold'>people</span><br/>have to <span className='text-green-500 font-bold'>say</span> about us</h1>
        <section>
             <article>
                 <div>

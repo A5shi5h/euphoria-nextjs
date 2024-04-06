@@ -1,11 +1,30 @@
 "use client";
 
+import { useEffect } from "react";
 import { LayoutGrid } from "../components/ui/layout-grid";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
  
 export function LayoutGridDemo() {
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+     gsap.to("#gallery" , {
+       scrollTrigger : {
+         trigger:"#gallery",
+         start:"top top",
+         end:"bottom 70%",
+         scrub:.5
+       },
+       opacity:1,
+       transform:"translateX(0%)",
+     })
+  },[])
+
   return (
-    <div id="gallery" className="h-screen py-20 w-full relative flex flex-col items-center justify-center">
+    <div id="gallery" className="h-screen py-20 w-full relative flex flex-col items-center justify-center translate-x-full opacity-0">
       <LayoutGrid cards={cards} />
       <h1 className="text-white text-center"><span>Click on the images to view -{">"}</span></h1>
       <button className="bg-green-600 text-1xl p-3 mt-6 rounded-full text-white font-semibold hover:bg-green-700">

@@ -9,6 +9,7 @@ export function ImagesSliderDemo() {
     "./images/img2.jpg",
     "./images/img3.jpg",
   ];
+
   return (
     <ImagesSlider className="h-[40rem]" images={images}>
       <motion.div

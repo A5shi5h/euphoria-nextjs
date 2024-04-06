@@ -1,10 +1,30 @@
-import React from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
+import React, { useEffect } from 'react'
 
 const About = () => {
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    gsap.to(".about-content" ,{
+       scrollTrigger : {
+         trigger:".about",
+         start:"top top",
+         end:"bottom 80%",
+         scrub:.2
+       },
+       opacity:1,
+       transform:"translateY(0)",
+       ease:"power1.in",
+       duration:2
+    })
+  } , [])
+
   return (
     <>
-     <div className='about' id='about'>
-       <div className='about-content'>
+     <div className='about relative' id='about'>
+       <div className='about-content opacity-0 translate-y-full'>
        <h1 className='about-heading'>About</h1>
        <p className='about-para font'>Welcome to Euphoria Singtam, a gastronomic haven where the art of fine dining meets the thrill 
         of culinary exploration. Nestled in the heart of Singtam, Euphoria is a restaurant like no other, where your dining experience 
