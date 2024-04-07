@@ -1,16 +1,24 @@
 
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
 import Link from 'next/link'
 import React, { useEffect } from 'react'
 
 const feedback = () => {
 
+  gsap.registerPlugin(ScrollTrigger);
+
   useEffect(() => {
     gsap.to("#feedback-text" , {
+      scrollTrigger : {
+        trigger:".feedback",
+        start:"top 20%",
+        end:"bottom 90%",
+        scrub:.2,
+      },
       opacity:1,
       transform:"translateY(0)",
       ease:"power2",
-      duration:1
     })
   },[])
 

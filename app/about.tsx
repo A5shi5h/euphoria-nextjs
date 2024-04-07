@@ -10,8 +10,8 @@ const About = () => {
     gsap.to(".about-content" ,{
        scrollTrigger : {
          trigger:".about",
-         start:"top top",
-         end:"bottom 80%",
+         start:"top 10%",
+         end:"bottom 70%",
          scrub:.2
        },
        opacity:1,

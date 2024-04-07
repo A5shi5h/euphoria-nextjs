@@ -1,13 +1,30 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 import Link from "next/link";
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
 
 export function ThreeDCardDemo() {
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    gsap.to(".owner" , {
+      scrollTrigger:{
+         trigger:".owner",
+         start:"top 10%",
+         end:"bottom bottom",
+         scrub:.2,
+      },
+       opacity:1,
+    })
+  },[])
+
   return (
-    <CardContainer className="inter-var overflow-y-hidden">
+    <CardContainer className="owner inter-var overflow-y-hidden opacity-0">
       <CardBody className="bg-gray-100 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[95vw] sm:w-[40rem] h-auto rounded-xl p-4 border overflow-x-hidden">
         <CardItem
           translateZ="50"
